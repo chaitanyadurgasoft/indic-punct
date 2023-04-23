@@ -46,7 +46,7 @@ def num_to_word(x: Union[str, int]):
     d={}
     if isinstance(x, int):
         x = str(x)
-        with open(get_abs_path(data_path+"digit.tsv"),encoding="UTF-8") as f:
+        with open(get_abs_path(data_path+"digit.tsv"),encoding="UTF-8", encoding='utf-8') as f:
             line = f.readlines()
         word_list = [w.strip().split("\t")[0] for w in line]
         num_list = [num.strip().split("\t")[1] for num in line]
